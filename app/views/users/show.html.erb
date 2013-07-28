@@ -1,8 +1,20 @@
-<h1><%= user.name %></h1>
-<h3><%= if user.is_single == true "Single" else "Taken" %> <%= user.age %> yr old <%= if is_female == true "female" else "male" %></h3>
+<h1><%= @user.username %></h1>
+
+<h3>
+  <% if @user.is_single == true %> Single <% else %> Taken <% end %>
+  <%= @user.age %> year old
+  <% if @user.is_female == true %> female <% else %> male <% end %>
+</h3>
 
 <div class="row">
     <div class="col-6 col-lg-4">
-      <img src="<% photo.image.user %>" class="img-rounded" width="300px">
+      <% if @user.is_female == true %>
+      <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/de72b6ff-b007-4f4f-bb94-63c479538c1d/Screen%20Shot%202013-05-07%20at%207.36.38%20PM.png" class="img-rounded" width="300px">
+      <% else %>
+      <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/7b4a5932-e9c8-47d4-8ae4-dbed488df4fd/562678_10151085466955141_1649844718_n.jpg" class="img-rounded" width="300px">
+      <% end %>
+    </div>
+    <div class="col-4 col-lg-6">
+      <p class="lead"><%= @user.profile_text %></p>
     </div>
   </div>

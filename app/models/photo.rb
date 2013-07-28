@@ -9,8 +9,8 @@ class Photo < ActiveRecord::Base
   end
 
   def enqueue_image
-    # ImageWorker.perform_async(id, key) if key.present?
-    ImageWorker.perform_async(id, key) if !image_processed && key.present?
+    ImageWorker.perform_async(id, key) if key.present?
+    # ImageWorker.perform_async(id, key) if !image_processed && key.present?
   end
 
   class ImageWorker

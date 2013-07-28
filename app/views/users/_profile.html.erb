@@ -1,23 +1,6 @@
-
-
-
-
-<!--
-NOT DONEEEEE -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 <%= form_for(@user) do |f| %>
+<fieldset>
+  <legend>Edit Profile</legend>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -29,25 +12,37 @@ NOT DONEEEEE -->
       </ul>
     </div>
   <% end %>
-  <h1>Hey there <%= user.name %></h1>
   <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+  <div class="form-group ">
+    <div class="field">
+      <%= f.label :single? %><br />
+      <%= f.select :is_single, [['Single', true], ['Taken', false]] %>
+    </div>
+    <div class="field">
+    <%= f.label :gender? %><br />
+    <%= f.select :is_female, [['Female', true], ['Male', false]] %>
+    </div>
   </div>
+<div class="form-group">
+    <div class="field">
+      <%= f.label :age %><br />
+      <%= f.number_field :age %>
+    </div>
+    <div class="field">
+      <%= f.label :zipcode %><br />
+      <%= f.number_field :zipcode %>
+    </div>
+</div>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :about_You %><br />
+    <%= f.text_area :profile_text %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+</fieldset>
 <% end %>
