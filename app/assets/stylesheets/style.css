@@ -2,6 +2,11 @@ body {
   padding-top: 20px;
 }
 
+.form-control.input-small {
+  float: left;
+  width: 200px;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile-first views */
 .masthead,
 .body-content,

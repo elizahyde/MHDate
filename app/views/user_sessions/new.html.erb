@@ -1,5 +1,11 @@
-<h1>Login</h1>
 
-<%= render 'form' %>
+<%= form_tag user_sessions_path :method => :post do  %>
+    <%= text_field_tag(:username, nil, class: 'form-control input-small', placeholder: 'username') %>
+    <%= password_field_tag(:password, nil, class: 'form-control input-small', placeholder: 'password') %>
+
+  <div class="actions">
+    <%= submit_tag(:Login, class: 'btn btn-small') %>
+  </div>
+<% end %>
 
 <%= link_to 'Back', user_sessions_path %>

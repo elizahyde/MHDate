@@ -4,7 +4,6 @@
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
       <ul>
       <% @user.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -12,26 +11,51 @@
       </ul>
     </div>
   <% end %>
+  <div class="col-lg-4">
+    <div class="field form-group">
+      <%= f.label :username %><br />
+      <%= f.text_field :username %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :email %><br />
+      <%= f.text_field :email %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :password %><br />
+      <%= f.password_field :password %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="field form-group">
+      <%= f.label :single? %><br />
+      <%= f.select :is_single, [['Single', true], ['Taken', false]] %>
+    </div>
+    <div class="field form-group">
+    <%= f.label :gender? %><br />
+    <%= f.select :is_female, [['Female', true], ['Male', false]] %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :age %><br />
+      <%= f.number_field :age %>
+    </div>
+    <div class="field form-group">
+      <%= f.label :zipcode %><br />
+      <%= f.number_field :zipcode %>
+    </div>
+  </div>
+  <div class="col-lg-4">
+  <div class="field form-group ">
+    <%= f.label :about_You %><br />
+    <%= f.text_area(:profile_text, rows: 5, class: 'form-control') %>
+  </div>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+  <div class="actions ">
+    <%= f.submit(class: 'btn btn-default') %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div class="actions btn btn-default">
-    <%= f.submit %>
   </div>
 </fieldset>
 <% end %>

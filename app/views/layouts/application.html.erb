@@ -22,9 +22,9 @@
         <a class="navbar-brand" href="/">Hey Babe</a>
         <div class="nav-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Matches</a></li>
-            <li><a href="#">Messages</a></li>
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/users">Matches</a></li>
+            <li><a href="#">Messages<span class="badge"></a></li>
           <% if current_user %>
             <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
             <li><%= link_to "Logout", :logout %></li>
@@ -38,8 +38,8 @@
     </div>
 
       <div>
-        <p id="notice"><%= notice %></p>
-        <p id="alert"><%= alert %></p>
+        <p id="notice" class="notice alert-success"><%= notice %></p>
+      <!--   <p id="alert" class="alert alert-danger"><%= alert %></p> -->
       </div>
 
       <div class="container">
@@ -51,7 +51,7 @@
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; Company 2013</p>
+        <p>&copy; Elizahyde 2013</p>
       </div>
 
     </div>
