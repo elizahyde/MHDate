@@ -1,8 +1,13 @@
 class PhotosController < ApplicationController
+  skip_before_filter :require_login, :except => [:gallery]
   def index
     @photos = Photo.all
     @uploader = Photo.new.image
     @uploader.success_action_redirect = new_photo_url
+  end
+
+  def gallery
+    @photos = Photo.all
   end
 
   def show

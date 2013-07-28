@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= user.name %></h1>
+<h3><%= if user.is_single == true "Single" else "Taken" %> <%= user.age %> yr old <%= if is_female == true "female" else "male" %></h3>
+
+<div class="row">
+    <div class="col-6 col-lg-4">
+      <img src="<% photo.image.user %>" class="img-rounded" width="300px">
+    </div>
+  </div>

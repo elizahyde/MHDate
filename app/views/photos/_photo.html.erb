@@ -1,12 +1,44 @@
-<div class="photo">
-  <%# if photo.image_processed? %>
-    <%= link_to image_tag(photo.image_url(:thumb)), photo %>
-  <%# else %>
-    <!-- <em>Processing...</em> -->
-  <%# end %>
-  <div class="caption"><%= photo.caption %></div>
-  <div class="actions">
-    <%= link_to "edit", edit_photo_path(photo) %> |
-    <%= link_to "remove", photo, :confirm => 'Are you sure?', :method => :delete %>
+<div class="row">
+  <div class="col-lg-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="">
+    </a>
+  </div>
+  <div class="col-lg-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="">
+    </a>
+  </div>
+  <div class="col-lg-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="">
+    </a>
+  </div>
+  <div class="col-lg-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="">
+    </a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="">
+    </a>
+  </div>
+  <div class="col-lg-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="">
+    </a>
+  </div>
+  <div class="col-lg-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="">
+    </a>
+  </div>
+  <div class="col-lg-3">
+    <a href="#" class="thumbnail">
+      <img data-src="holder.js/100%x180" alt="">
+    </a>
   </div>
 </div>

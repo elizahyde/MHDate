@@ -4,24 +4,65 @@
     <title>Tutorial</title>
       <%= stylesheet_link_tag    "application" %>
       <%= javascript_include_tag "application" %>
-      <%= csrf_meta_tags %>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
   </head>
   <body>
 
-  <div id="nav">
-    <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-      <%= link_to "Logout", :logout %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
-    <% end %>
-  </div>
-  <div>
-    <p id="notice"><%= notice %></p>
-    <p id="alert"><%= alert %></p>
-  </div>
-  <%= yield %>
+    <!-- Static navbar -->
+    <div class="navbar navbar-static-top">
+      <div class="container">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Hey Babe</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Matches</a></li>
+            <li><a href="#">Messages</a></li>
+          <% if current_user %>
+            <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
+            <li><%= link_to "Logout", :logout %></li>
+          <% else %>
+            <li><%= link_to "Register", new_user_path %></li>
+            <li><%= link_to "Login", :login %></li>
+          <% end %>
+            <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+
+      <div>
+        <p id="notice"><%= notice %></p>
+        <p id="alert"><%= alert %></p>
+      </div>
+
+      <!-- Jumbotron -->
+<!--           <div class="jumbotron">
+        <h1>Marketing stuff!</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+        <p><a class="btn btn-large btn-success" href="#">Get started today</a></p>
+      </div> -->
+      <div class="container">
+
+      <div class="body-content">
+        <%= yield %>
+
+      </div>
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>&copy; Company 2013</p>
+      </div>
+
+    </div>
+
+
 
   </body>
 </html>
