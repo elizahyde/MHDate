@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @user = current_user
+    # @user = current_user
 
     respond_to do |format|
       format.html # index.html.erb
