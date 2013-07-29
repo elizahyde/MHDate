@@ -1,0 +1,24 @@
+<p>
+ From:
+  <%= @message.sender == @user ? "You" : "#{@message.sender.username} #{@message.sender.username}" %>
+</p>
+
+<p>
+  Received:
+  <%= @message.created_at.to_s(:long) %>
+</p>
+<p>
+  To:
+  <%= @message.receiver == @user ? "You" : "#{@message.receiver.username} #{@message.receiver.username}" %>
+</p>
+
+<p>
+  Message<br />
+  <%=h @message.content %>
+</p>
+<p>
+  <% if @message.receiver == @user %>
+  <%= link_to "Reply", new_user_message_path(@user, :reply_to => @message.sender.user_id) %> |
+  <% end %>
+  <%= link_to "Inbox", user_messages_path(current_user, :mailbox=>:inbox)%>
+</p>

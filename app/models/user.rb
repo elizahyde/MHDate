@@ -8,10 +8,19 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, :message => "should match confirmation", :if => :password
 
   def received_messages
-    Message.where(:receiver_id => self.id)
+    Message.where(:receiver => self.id)
   end
 
   def sent_messages
-    Message.where(:sender_id => self.id)
+    Message.where(:sender => self.id)
+  end
+
+  def unread_messages?
+    unread_message_count > 0 ? true : false
+  end
+
+  # Returns the number of unread messages for this user
+  def unread_message_count
+    eval 'messages.count(:conditions => ["recepient = ? AND read_at IS NULL", self.sender])'
   end
 end

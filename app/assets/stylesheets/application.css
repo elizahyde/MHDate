@@ -10,6 +10,7 @@
  *
  *= require_self
  *= require style
+ *= require toastr
  *= require bootstrap
  *= require_tree .
  */

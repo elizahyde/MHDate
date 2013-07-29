@@ -56,4 +56,7 @@ gem 'rmagick'
 gem 'fog'
 gem 'sidekiq'
 gem 'carrierwave_direct'
+gem 'pusher'
+gem "private_pub"
+gem "thin"
 # gem 'activeadmin'

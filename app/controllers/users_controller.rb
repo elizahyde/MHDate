@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @photos = Photo.all
     @user = User.find(params[:id])
 
     respond_to do |format|

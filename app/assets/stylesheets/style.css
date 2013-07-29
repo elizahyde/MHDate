@@ -6,6 +6,34 @@ body {
   float: left;
   width: 200px;
 }
+.thumbsquare {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-size: cover;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.428571429;
+  padding: 4px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  max-width: 100%;
+}
+
+.userbox {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 10px;
+  display: block;
+  line-height: 1.428571429;
+}
+
+a.userbox:hover,
+a.userbox:focus {
+  border-color: #428bca;
+}
 
 /* Everything but the jumbotron gets side spacing for mobile-first views */
 .masthead,

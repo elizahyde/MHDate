@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require bootstrap.min
+//= require toastr
+//= require private_pub
 //= require jquery_ujs
 //= require_tree .

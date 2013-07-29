@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 user_list = [
+  [ "Elizahyde", "ehramberg@gmail.com", 28, 94105, true, true],
   [ "BobSF", "bob@email.com", 27, 94105, false, true],
   [ "JohnMatthews", "john@email.com", 31, 94103, false, true],
   [ "MaryLovesCats", "mary@email.com", 31, 94110, true, true],
@@ -25,5 +26,5 @@ user_list = [
 ]
 
 user_list.each do |username, email, age, zipcode, is_female, paid_user, is_single, password, password_confirmation|
-  User.create( username:username, email:email, age: age, zipcode: zipcode, is_female: is_female, paid_user: paid_user, is_single: true, password:"password", password_confirmation:"password",)
+  User.create( username:username, email:email, age: age, zipcode: zipcode, is_female: is_female, paid_user: paid_user, is_single: true, password:"password", password_confirmation:"password")
 end

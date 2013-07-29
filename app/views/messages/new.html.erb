@@ -1,0 +1,19 @@
+<%= form_for @message, :url => user_messages_path(@user) do |f| %>
+  <% if @message.receiver.nil? %>
+    <p>
+      To:<br />
+      <%= f.text_field :receiver %>
+    </p>
+  <% else %>
+    <p>
+      To:<br />
+      <%= f.text_field :receiver, :value=>@message.receiver,:readonly => true %>
+    </p>
+  <% end %>
+      <p>
+        Message<br />
+        <%= f.text_area :content %>
+      </p>
+
+      <%= submit_tag "Send"%>
+<% end %>

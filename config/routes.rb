@@ -1,5 +1,6 @@
 AlrightValentine::Application.routes.draw do
 
+
   root :to => 'photos#index'
   resources :user_sessions
   resources :users
