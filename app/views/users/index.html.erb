@@ -3,10 +3,14 @@
   <% @users.each do |user| %>
   <div class="col-lg-4">
     <div class="thumbnail">
-      <% if user.is_female == true %>
-      <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/de72b6ff-b007-4f4f-bb94-63c479538c1d/Screen%20Shot%202013-05-07%20at%207.36.38%20PM.png" class="img-rounded media-object" width="300px">
-      <% else %>
-      <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/7b4a5932-e9c8-47d4-8ae4-dbed488df4fd/562678_10151085466955141_1649844718_n.jpg" class="img-rounded" width="300px">
+      <% user.photos.each do |photo| %>
+        <% if photo.image %>
+          <img src="<%= photo.image_url %>" class="img-rounded" width="300px">
+        <% elsif user.is_female == true %>
+          <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/34332dfa-aa6a-4a98-b594-1cdfa3bc33c7/female.jpg" class="img-rounded media-object" width="300px">
+        <% else %>
+          <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/1f25702c-1702-4f46-adaf-13f72d883b9d/male.jpg" class="img-rounded" width="300px">
+        <% end %>
       <% end %>
       <div class="caption">
         <h3><%= user.username %></h3>

@@ -4,7 +4,7 @@ body {
 
 .form-control.input-small {
   float: left;
-  width: 200px;
+  width: px;
 }
 .thumbsquare {
   width: 200px;
@@ -20,6 +20,7 @@ body {
   border: 1px solid #dddddd;
   max-width: 100%;
 }
+
 
 .userbox {
   background-color: white;

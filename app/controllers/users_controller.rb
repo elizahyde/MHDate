@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    @photos = Photo.all
     @users = User.all
     # @user = current_user
 
