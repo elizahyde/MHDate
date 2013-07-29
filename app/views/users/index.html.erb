@@ -5,7 +5,7 @@
     <div class="thumbnail">
       <% user.photos.each do |photo| %>
         <% if photo.image %>
-          <img src="<%= photo.image_url %>" class="img-rounded" width="300px">
+          <a href="/users/<%= photo.user_id %>"><img src="<%= photo.image_url %>" class="img-rounded" width="300px"></a>
         <% elsif user.is_female == true %>
           <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/34332dfa-aa6a-4a98-b594-1cdfa3bc33c7/female.jpg" class="img-rounded media-object" width="300px">
         <% else %>

@@ -2,10 +2,47 @@ body {
   padding-top: 20px;
 }
 
+.navbar {
+  background-color: #E2F2E4;
+}
+.about_hottie {
+  background-color: gray;
+  opacity: .8;
+  position: relative;
+}
 .form-control.input-small {
   float: left;
   width: px;
 }
+
+caption {
+  display:block;
+}
+#hotties li {
+  display:block;
+  float:left;
+  position:relative;
+}
+#hotties img {
+  display:block;
+  width:350px;
+}
+#hotties caption {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  display:none;
+  padding:10px;
+  color:#fff;
+  background:black;
+  background:rgba(0,0,0,0.8);
+  visibility:none;
+}
+#hotties caption {
+  visibility:visible;
+}
+
 .thumbsquare {
   width: 200px;
   height: 200px;
@@ -20,7 +57,6 @@ body {
   border: 1px solid #dddddd;
   max-width: 100%;
 }
-
 
 .userbox {
   background-color: white;

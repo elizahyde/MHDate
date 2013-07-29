@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap.min
 //= require toastr
+//= require photos
 //= require private_pub
 //= require jquery_ujs
 //= require_tree .

@@ -39,7 +39,10 @@
     <%= f.label :about_You %><br />
     <%= f.text_area :profile_text %>
   </div>
-
+  <%= direct_upload_form_for @uploader do |f| %>
+    <p><%= f.file_field :image %></p>
+    <p><%= f.submit "Upload Image" %></p>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

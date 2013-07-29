@@ -1,0 +1,17 @@
+<h1>Hotties</h1>
+<div class="row">
+  <% @photos.each do |photo| %>
+    <div class="col-lg-3">
+      <div>
+        <a href="/users/<%= photo.user_id %>"><img src="<%= photo.image %>" alt="" class="thumbnail" width="220"></a>
+      </div>
+    </div>
+  <% end %>
+  </div>
+
+  <%= direct_upload_form_for @uploader do |f| %>
+    <p><%= f.file_field :image %></p>
+    <p><%= f.submit "Upload Image" %></p>
+  <% end %>
+</div>
+

@@ -1,24 +1,26 @@
-<h1><%= @user.username %></h1>
 
-<h3>
-  <% if @user.is_single == true %> Single <% else %> Taken <% end %>
-  <%= @user.age %> year old
-  <% if @user.is_female == true %> female <% else %> male <% end %>
-</h3>
 
 <div class="row">
+
     <div class="col-6 col-lg-4">
-      <p class="lead"><%= @user.profile_text %></p>
-    </div>
-    <div class="col-4 col-lg-6">
       <% @user.photos.each do |photo| %>
         <% if photo.image %>
-          <img src="<%= photo.image_url %>" class="img-rounded" width="300px">
+          <img src="<%= photo.image_url %>" class="img-rounded thumbnail" width="350px">
         <% elsif user.is_female == true %>
-          <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/34332dfa-aa6a-4a98-b594-1cdfa3bc33c7/female.jpg" class="img-rounded media-object" width="300px">
+          <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/34332dfa-aa6a-4a98-b594-1cdfa3bc33c7/female.jpg" class="img-rounded" width="350px">
         <% else %>
-          <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/1f25702c-1702-4f46-adaf-13f72d883b9d/male.jpg" class="img-rounded" width="300px">
+          <img src="https://elizahyde-profile-pics.s3.amazonaws.com/uploads/1f25702c-1702-4f46-adaf-13f72d883b9d/male.jpg" class="img-rounded" width="350px">
         <% end %>
       <% end %>
-    </div>
+      </div>
+      <div class="col-6 col-lg-4 about_hottie">
+        <h1><%= @user.username %></h1>
+        <h3>
+          <% if @user.is_single == true %> Single <% else %> Taken <% end %>
+          <%= @user.age %> year old
+          <% if @user.is_female == true %> female <% else %> male <% end %>
+          <p class="lead"><%= @user.profile_text %></p>
+        </h3>
+      </div>
+
   </div>
