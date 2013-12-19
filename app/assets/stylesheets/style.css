@@ -1,10 +1,36 @@
 body {
-  padding-top: 20px;
+  padding-top: 10px;
+}
+
+body {
+  background-image:url('paper.jpg');
+  background-repeat: repeat-y;
+}
+
+.body-content {
+  margin-left: 200px;
+}
+.navbar-brand, .navbar-nav > li > a {
+  color: red;
+
+  font-size: 22px;
+  font-family: 'Swanky and Moo Moo', cursive;
+}
+
+.navbar-brand {
+  font-size: 36px;
+   text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+
 }
 
 .navbar {
-  background-color: #E2F2E4;
+  background-color: transparent;
 }
+
+
+
+
+
 .about_hottie {
   background-color: gray;
   opacity: .8;
@@ -12,7 +38,7 @@ body {
 }
 .form-control.input-small {
   float: left;
-  width: px;
+  width: 100px;
 }
 
 caption {

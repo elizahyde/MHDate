@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
   var photos = $('#hotties li');

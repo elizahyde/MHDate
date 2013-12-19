@@ -4,6 +4,7 @@
     <title>Hey There</title>
       <%= stylesheet_link_tag    "application" %>
       <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+      <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore|Swanky+and+Moo+Moo|Covered+By+Your+GraceSatisfy' rel='stylesheet' type='text/css'>
       <%= javascript_include_tag "application" %>
       <%= custom_bootstrap_flash %>
       <meta charset="utf-8">
@@ -21,11 +22,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Hey There</a>
+        <a class="navbar-brand" href="/">CrayDate</a>
         <div class="nav-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/users">Matches</a></li>
+            <li class="active"><a href="/users">Potentials</a></li>
             <li><a href="#">Messages<span class="badge"></a></li>
           <% if current_user %>
             <li><%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
@@ -35,23 +35,27 @@
             <li><%= link_to "Login", :login %></li>
           <% end %>
             <li><a href="#">Help</a></li>
-        </ul>
+          </ul>
+        </div>
       </div>
     </div>
 
       <div>
         <p id="notice" class="notice alert-success"><%= notice %></p>
       </div>
-      <div class="container">
 
       <div class="body-content">
         <%= yield %>
 
       </div>
+      <div class="container">
+        <div class="page-header">
+          <h1>Dating for the 26.2% <small>An estimated 26.2% of Americans suffer from a diagnosable mental disorder in a given year. This is the dating site for those 57.7 million.*</small></h1>
+        </div>
 
       <!-- Site footer -->
       <div class="footer">
-        <p>&copy; Elizahyde 2013</p>
+        <p>Source: <a href="http://www.nimh.nih.gov/health/publications/the-numbers-count-mental-disorders-in-america/index.shtml"> NIMH </a> &copy; Elizahyde 2013</p>
       </div>
 
     </div>
